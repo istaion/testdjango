@@ -1,6 +1,7 @@
-<html>
-    <head><title>Merchex</title></head>
-    <body>
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
         <h1>Hello Django !</h1>
         <p>Mes groupes préférés sont :</p>
         <ul>
@@ -8,5 +9,5 @@
             <li>{{ band.name }}</li>
             {% endfor %}
         </ul>
-    </body>
-</html>
+
+{% endblock %}
