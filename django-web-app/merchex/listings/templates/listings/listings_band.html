@@ -1,9 +1,9 @@
 {% extends 'listings/base.html' %}
 
 {% block content %}
-        <h1>listes :</h1>
+        <h1>listes pour {{ band.name }} :</h1>
         <ul>
-            {% for listing in listings %}
+            {% for listing in band.listing_set.all %}
             <li><a href="{% url 'listing-detail' listing.id %}">{{ listing.title }}</a></li>
             {% endfor %}
         </ul>
